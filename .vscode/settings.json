@@ -1,0 +1,39 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+    // "source.fixAll": "explicit"
+  },
+  "files.insertFinalNewline": true,
+  "[json][jsonc][markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "mypy-type-checker.args": ["--strict"],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  // YAML
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "!ENV scalar",
+    "!ENV sequence",
+    "!relative scalar",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+    "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
+  ]
+}
