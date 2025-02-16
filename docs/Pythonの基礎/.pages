@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - number_bool.md
+    - str.md
+    - コンテナ型
+    - if_for.md
+    - func.md
+    - module.md
+    - クラス
