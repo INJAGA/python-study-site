@@ -1,0 +1,7 @@
+nav:
+    - index.md
+    - virtual_env.md
+    - tools.md
+    - uv_install.md
+    - python_install.md
+    - init_project.md

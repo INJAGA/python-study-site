@@ -1,17 +1,57 @@
-# Welcome to MkDocs
+---
+icon: octicons/info-16
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# 当サイトについて
 
-## Commands
+プロを目指す方向けのPython学習サイトです。
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+## 方針
 
-## Project layout
+下記の方針で記事を執筆しております。
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- :sparkles: **モダン＆最新な情報**: モダンPythonと言われる最新の内容
+- :fire: **実用性の重視**: 詳細・網羅性よりも、実用的・実践的を優先
+- :flexed_biceps: **ベストプラクティス**: 筆者が最善と考える内容を紹介
+- :shield: **端的で型のあるコード**: 型ヒントありの読みやすいコードで説明
+
+??? tip "モダンなコード例"
+
+    Pythonは、今もなお開発が続けられているプログラミング言語です。
+    Pythonがバージョンアップされる際、新たな機能が追加されることがあります。
+    その過程で、新機能によりレガシーとなってしまった文法や記法があります。
+
+    例えば、「文字列の中に変数の値を埋め込む」ためのコードを例に見てみましょう。
+
+    ```py
+    name = "鈴木"
+    age = 24
+
+    # Python3.6以前：format()メソッドで実装
+    "私は{}です。{}歳です。".format(name, age) # => "私は鈴木です。24歳です。"
+
+    # Python3.6以降：f文字列で実装
+    f"私は{name}です。{age}歳です。" # => "私は鈴木です。24歳です。"
+    ```
+
+    **f文字列**という言語機能が追加されたことで、後者のように書くことができるようになりました。
+
+    多くの方にとっては、後者の方が読みやすいコードでしょう。
+    前者の記法を採用するメリットはほとんどないと言えます。
+
+## 対象読者
+
+プログラミングの一般的な概念については説明を省き、中〜上級レベルでの説明を目指しています。
+
+他プログラミング言語の経験者や、Python基礎学習を終えた方を対象にしています。
+
+## 筆者情報
+
+IT企業でSEをやっています。Python書いたりSvelteでWeb開発したりしています。
+
+- :crown: AWS認定プロフェッショナル二冠
+- 🎓 ネスペ、デスペ、情報処理安全確保支援士
+
+記事内容に誤りや改善案などありましたら、お気軽にGitHubで教えていただけますと幸いです。
+
+- 本サイトのソースリポジトリ: [:simple-github: INJAGA/python-study-site](https://github.com/INJAGA/python-study-site)

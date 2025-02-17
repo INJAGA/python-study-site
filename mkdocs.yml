@@ -1,4 +1,113 @@
-site_name: My Docs
-site_url: https://mydomain.org/mysite
+site_name: プロを目指す実用Python
+site_url: https://python-study.pages.dev
+repo_url: https://github.com/INJAGA/python-study-site
+repo_name: INJAGA/python-study-site
 theme:
   name: material
+  language: ja
+  font:
+    false
+    # text: Noto Sans JP
+  icon:
+    logo: material/fire-circle
+    repo: fontawesome/brands/github
+  # logo: images/favicon.png
+  # favicon: images/favicon.png
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: ライトモードへ切り替え
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: ダークモードへ切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: システム設定へ切り替え
+  features:
+    # SPAのように動作させ、ローディングバーを表示
+    - navigation.instant
+    - navigation.instant.progress
+    # スクロールの表示位置でURLアンカーを自動更新
+    - navigation.tracking
+    # 幅1220px以上でトップレベルセクションをタブで固定表示
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # インデックスページをセクションに直接アタッチ
+    - navigation.indexes
+    # TOCの現在地が常に見えるように自動スクロール
+    - toc.follow
+    # ページ冒頭に戻るボタン表示
+    - navigation.top
+
+    # フッターに前のページ/次のページのリンク追加
+    - navigation.footer
+    # ツールチップを美しく
+    - content.tooltips
+
+    # コードにコピーボタン表示
+    - content.code.copy
+    # コードにアノテーション機能を追加
+    - content.code.annotate
+
+markdown_extensions:
+  - toc:
+      # 各パラグラフにリンクを追加
+      permalink: true
+      permalink_title: ""
+      # slugの作成メソッドを変更
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - admonition # メッセージ機能
+  - pymdownx.details # メッセージ機能を開閉可能に
+  - pymdownx.superfences: # 任意のコードやコンテンツブロックをネスト可能に
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list # MD要素に、HTML属性とCSSクラスを追加可能に
+  - md_in_html # HTML内部でMDを書けるように
+  # コードのハイライト
+  - pymdownx.highlight:
+      # linenums: true
+      anchor_linenums: true # コードの行番号にURLアンカーリンクを付加
+      line_spans: __span # 行ごとのハイライトを可能に
+      pygments_lang_class: true
+  - pymdownx.inlinehilite # インラインコードをハイライト
+  - pymdownx.snippets # 外部ファイルを埋め込み可能に
+  # コンテンツタブ機能
+  - pymdownx.tabbed:
+      alternate_style: true # タブの切替スタイル
+      # slugの作成メソッドを変更
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - tables # テーブル機能
+  - pymdownx.critic # 変更ハイライトの機能
+  - pymdownx.caret # 「==ハイライト==」記法
+  - pymdownx.mark # 「^^下線^^」記法
+  - pymdownx.tilde # 「~~打ち消し~~」記法
+  - pymdownx.keys # キーボードキーの表示
+  # アイコンと絵文字
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list # 定義リスト
+  - pymdownx.tasklist: # タスクリスト
+      custom_checkbox: true # チェックリストを美しく
+
+plugins:
+  - search
+  - awesome-pages
+
+extra_css:
+  - css/extra.css
